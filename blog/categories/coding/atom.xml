@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Coding | Fragmented Notes]]></title>
+  <link href="http://doxanthropos.github.io/blog/categories/coding/atom.xml" rel="self"/>
+  <link href="http://doxanthropos.github.io/"/>
+  <updated>2015-08-28T15:15:41+02:00</updated>
+  <id>http://doxanthropos.github.io/</id>
+  <author>
+    <name><![CDATA[Knut Jackowski]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Blogging About Processing]]></title>
+    <link href="http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing/"/>
+    <updated>2014-06-13T14:56:31+02:00</updated>
+    <id>http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing</id>
+    <content type="html"><![CDATA[<p>Some notes about Processing</p>
+
+<h3>Creative Coding MOOC</h3>
+
+<p>Since last week there is a course about creative coding on <a href="https://www.futurelearn.com" title="a mooc provider">Futurelearn</a>, held by John McCormack from the Monash University. It started great and was already very successful in motivating the participants to combine art and programming. The language of choice is <a href="http://processing.org/">Processing</a>, a Java-based language, that provides easy access to the kind of functions that are usually needed to make art on the computer.</p>
+
+<h4>Showing Processing on the web</h4>
+
+<p>Since art wants to be seen, there is of course a need to have a way of showing the code and its running examples to others. Processing already comes with some ways to do that. You can for example build an android app from your code or a standalone Java-Program. But the way to go, to show something to an audience today qould of course be the web.</p>
+
+<h4>Openprocessing and sketchpad</h4>
+
+<p>Two websites are explicitely dedicated to the cause of showcasing Processing-sketches: <a href="http://www.openprocessing.org/">Openprocessing</a> and <a href="http://sketchpad.cc/">Sketchpad</a>. Both provide not only the possibility to share your existing sketches and show them online, but also to create new ones online.</p>
+
+<h4>Processing.js</h4>
+
+<p>Both these sites use <a href="http://processingjs.org/">Processing.js</a>, a port of the Processing language to Javascript. With Processing.js, it is possible to run sketches in any browser that supports modern web technologies (Javascript, Canvas). So theoretically it is possible, to show sketches on any webpage, not only on the sites that are built to do that. For example on your own website or blog. The pragmatic way to achieve that, would be to embed sketches from Openprocessing or Sketchpad in that site, but why not go the fully self sufficient route?</p>
+
+<h4>simple HTML-page</h4>
+
+<p>There is not much to know, to use Processing on a simple html-page. All the steps are explained on the <a href="http://processingjs.org/articles/p5QuickStart.html">Quick Start Article</a> from Processing.js.
+In short: You just put the Prcessing.js file in place, where you store your other Javascripts, load them in the head of your webpage and ten you can add a Canvas element, that loads your sketch.</p>
+
+<h4>Octopress</h4>
+
+<p>But what, if your website is done the hacker way, if it is an <a href="http://octopress.org/">octopress</a> blog on github?</p>
+
+<p>Basically it&rsquo;s the same as using Processing.js on any other html-page.</p>
+
+<h4>Where to put the Processing.js?</h4>
+
+<p>Octopress has a folder named &ldquo;javascripts&rdquo; and that would be where to put the Processing.js file. Of course, you will want to put it in the source/javascripts folder, so that it will not vanish when you rebuild the blog.</p>
+
+<h4>Where is the head of my template?</h4>
+
+<p>Since the Javascript is usually placed in the head-section of a webpage, you need to put the reference to Processing.js into the head.html file that is located in the source/_includes folder in the same place, where you find the other Javascript references. It will look somewhat like this:</p>
+
+<pre><code>&lt;script src="/javascripts/processing.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h4>Making your sketches a comfortable home</h4>
+
+<p>To have some order in my files, I decided to make a folder with the name &ldquo;processing&rdquo; for all the sketches, that I might want to share with the world. Of course also in the &ldquo;source&rdquo; folder. Now I can put any sketch that I want to include in a blogpost in this folder and load it into a canvas-element, just like this:</p>
+
+<pre><code>&lt;center&gt;
+&lt;canvas data-processing-sources="/processing/tutorial.pde"&gt;&lt;/canvas&gt;
+&lt;/center&gt;
+</code></pre>
+
+<p>This is the a sketch from the <a href="http://processing.org/tutorials/gettingstarted/">&ldquo;getting started&rdquo; tutorial</a> on the processing site and on this blog it looks like this:</p>
+
+<center>
+<canvas data-processing-sources="/processing/tutorial.pde"></canvas>
+</center>
+
+]]></content>
+  </entry>
+  
+</feed>

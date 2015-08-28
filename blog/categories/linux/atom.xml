@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | Fragmented Notes]]></title>
+  <link href="http://doxanthropos.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://doxanthropos.github.io/"/>
+  <updated>2015-08-28T15:15:41+02:00</updated>
+  <id>http://doxanthropos.github.io/</id>
+  <author>
+    <name><![CDATA[Knut Jackowski]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up the Tools for CS 50]]></title>
+    <link href="http://doxanthropos.github.io/blog/2015/01/05/setting-up-the-tools-for-cs-50/"/>
+    <updated>2015-01-05T13:45:11+01:00</updated>
+    <id>http://doxanthropos.github.io/blog/2015/01/05/setting-up-the-tools-for-cs-50</id>
+    <content type="html"><![CDATA[<p>So CS 50 has officially begun. Time to get my computer ready for the work.</p>
+
+<p>The installation and use of the appliance is covered in great detail on the coursepages, so there is no need to describe it here. What I do different is that I plan to work mostly outside of the appliance, because my computer is barely able to run it and it is a pain in the backside to use it for longer periods (It&rsquo;s an old laptop, that wasn&rsquo;t powerful even when it was new.).</p>
+
+<!-- more -->
+
+
+<p>Since I am using Linux on my computer as the main operating system, setting it up for coding is not so big a task. Most of the packages are allready installed by me (the most important would be &ldquo;build-essential&rdquo;, a metapackage, that brings compilers and stuff). Getting the functions from CS 50 to work is another thing.</p>
+
+<p>First I followed the instructions on the <a href="https://manual.cs50.net/library/">manual</a> for the CS 50 libraries. It was a lot of copy/pasting, but in the end the libraries in all four languages worked fine.</p>
+
+<p>After that, I began to search for instructions for the other tools of the appliance, most important the check50 script. A nice <a href="https://medium.com/@ddiipp/take-harvards-cs50-without-cs50-appliance-8372acb91314">blogpost on medium</a> showed me where to look, but sadly the mentioned git-repository was deleted since then. I found a <a href="https://github.com/jthurner/check50">copy of it on github</a> and tried to install it. Worked fine. But the most interesting part of it was the question: will it work with the current course?</p>
+
+<p>For convenience I quickly made alias for it:
+<code>bash
+alias check50="node /"path to my cs 50 folder"/cs50/check50/SOURCES/opt/check50/bin/check50.js"
+</code></p>
+
+<p>After that, I tried the <a href="http://cdn.cs50.net/2015/x/psets/1/pset1/pset1.html#hello_c">example code from the coursesite</a>:
+<figure class='code'><figcaption><span>[Hello World - The first try] (hello-0.1.c)</span> <a href='/downloads/code/hello-0.1.c'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>This compiled without visible errors, but when I made the compiling a little more verbose, I got this:</p>
+
+<pre><code class="bash">$ CFLAGS="-Wall" make hello
+cc -Wall    hello.c   -o hello
+hello.c: In function ‘main’:
+hello.c:6:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+</code></pre>
+
+<p>One line more and the more verbose compiling also went on without errors:</p>
+
+<p><figure class='code'><figcaption><span>[Hello World - Without Warnings] (hello.c)</span> <a href='/downloads/code/hello.c'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Time to use the code to test the check50 function with the new course:</p>
+
+<pre><code class="bash">$ check50 2014.fall.pset1.hello hello.c
+:) hello.c exists
+:) hello.c compiles
+:) prints "hello, world\n"
+</code></pre>
+
+<p>That went well. It seems like I am ready to dive into the coding problems and need only use the appliance for submitting the solutions. On the side, I have become somewhat comfortable with the functions, that <a href="http://octopress.org">Octopress</a> provides for embedding code into blogposts.</p>
+]]></content>
+  </entry>
+  
+</feed>

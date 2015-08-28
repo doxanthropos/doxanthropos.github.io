@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>SICP in Emacs: Reading in the info-Buffer - Fragmented Notes</title>
+  <meta name="author" content="Knut Jackowski">
+
+  
+  <meta name="description" content="Structure and Interpretation of Computer Programs, short SICP is a great book and Emacs is a great tool for all things about text. So it is only &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://doxanthropos.github.io/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Fragmented Notes" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/processing.min.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Fragmented Notes</a></h1>
+  
+    <h2>This is where I write about learning to code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=DoxanthroposBlog&amp;loc=en_US" rel="subscribe-email" title="subscribe via email">Email</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="doxanthropos.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/links">Links</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">SICP in Emacs: Reading in the info-Buffer</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-10-09T22:21:44+02:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:21 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Structure and Interpretation of Computer Programs, short <a href="http://mitpress.mit.edu/sicp/">SICP</a> is a great book and <a href="http://www.gnu.org/software/emacs/">Emacs</a> is a great tool for all things about text. So it is only natural to use one with the other and yesterday I stumbled upon this blogpost: <a href="http://jugglingbits.wordpress.com/2009/12/04/sicp-in-emacs/">SICP in Emacs</a>. Sadly I had no idea about how to use or install a book in the info-system. That had to change a bit and the following will be instruction for me in the future, should I forget how to bring the greatest CS-book of the 80ies into one of the greatest programs from the 80ies.</p>
+
+<!-- more -->
+
+
+<p>In the search for information on info, I found that there is a lot of documentation missing from my relatively recent Debian install. Most of the more interesting parts on info are in the package &ldquo;texinfo-doc-nonfree&rdquo;. I suggest to install it on every system, because the <a href="http://www.gnu.org/software/texinfo/manual/texinfo/html_node/index.html">info system</a> is very cool and it is very rewarding t read its manual. What I don&rsquo;t understand is the &ldquo;nonfree&rdquo; part: should it not be free software as a part of the GNU-project?
+So the first step is this:</p>
+
+<pre><code>sudo apt-get install texinfo-doc-nonfree 
+</code></pre>
+
+<p>After that, I downloaded the Info-version of SICP, that can be found on the <a href="http://www.neilvandyke.org/sicp-texi/">website of Neil van Dyke</a>.</p>
+
+<p>This file has to be moved to a &ldquo;info directory&rdquo;. The manual mentioned above explains how to build one, but I just used the one used by Emacs and gave the file the necessary permissions:</p>
+
+<pre><code>sudo cp sicp.info.gz /usr/local/share/info/
+sudo chmod 644 /usr/local/share/info/sicp.info.gz 
+</code></pre>
+
+<p>The rest of the installation is done by &ldquo;<a href="http://www.gnu.org/software/texinfo/manual/texinfo/html_node/Invoking-install_002dinfo.html">install-info</a>&rdquo;:</p>
+
+<pre><code>sudo install-info /usr/local/share/info/sicp.info.gz /usr/local/share/info/dir
+</code></pre>
+
+<p>This all of course works primarily on Debian-GNU/Linux, but some good advice for info on Windows seems to be found in this blogpost: <a href="http://pchristensen.com/blog/articles/setting-up-and-using-emacs-infomode/">http://pchristensen.com/blog/articles/setting-up-and-using-emacs-infomode/</a></p>
+
+<p>My complete reading setup for SICP now looks like this:</p>
+
+<p><img src="/images/2014-10-sicp-in-emacs.png" alt="A screenshot of Emacs with three frames: sicp, a source code file and a scheme REPL" /></p>
+
+<p>It looks like I am not the only one who likes this technological opportunity <a href="https://www.flickr.com/photos/redbike/5324820738/in/photostream/">enough to make a screenshot</a></p>
+
+<p>If you need some convincing, why reading SICP in the first place is a good idea, you might read this article: <a href="http://hackerretreat.com/why-how-start-sicp/">Why and how to start your sicp trek</a></p>
+
+<p>As RMS tends to say: &ldquo;Happy hacking!&rdquo;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Knut Jackowski</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-10-09T22:21:44+02:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:21 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/emacs/'>emacs,</a>, <a class='category' href='/blog/categories/sicp/'>sicp</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://doxanthropos.github.io/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/" data-via="doxanthropos" data-counturl="http://doxanthropos.github.io/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/13/blogging-about-processing/" title="Previous Post: Blogging about Processing">&laquo; Blogging about Processing</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2015/01/05/setting-up-the-tools-for-cs-50/" title="Next Post: Setting up the tools for CS 50">Setting up the tools for CS 50 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/08/09/creative-coding-again/">Creative Coding With Processing ... Again</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/26/sharing-with-diaspora/">Sharing With Diaspora</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/11/learning-python/">Learning Python: Free Resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/05/setting-up-the-tools-for-cs-50/">Setting Up the Tools for CS 50</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/">SICP in Emacs: Reading in the info-Buffer</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/doxanthropos">@doxanthropos</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'doxanthropos',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Knut Jackowski -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'doxanthropossblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://doxanthropos.github.io/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/';
+        var disqus_url = 'http://doxanthropos.github.io/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

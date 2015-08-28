@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Emacs, | Fragmented Notes]]></title>
+  <link href="http://doxanthropos.github.io/blog/categories/emacs/atom.xml" rel="self"/>
+  <link href="http://doxanthropos.github.io/"/>
+  <updated>2015-08-28T15:15:41+02:00</updated>
+  <id>http://doxanthropos.github.io/</id>
+  <author>
+    <name><![CDATA[Knut Jackowski]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SICP in Emacs: Reading in the info-Buffer]]></title>
+    <link href="http://doxanthropos.github.io/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/"/>
+    <updated>2014-10-09T22:21:44+02:00</updated>
+    <id>http://doxanthropos.github.io/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer</id>
+    <content type="html"><![CDATA[<p>Structure and Interpretation of Computer Programs, short <a href="http://mitpress.mit.edu/sicp/">SICP</a> is a great book and <a href="http://www.gnu.org/software/emacs/">Emacs</a> is a great tool for all things about text. So it is only natural to use one with the other and yesterday I stumbled upon this blogpost: <a href="http://jugglingbits.wordpress.com/2009/12/04/sicp-in-emacs/">SICP in Emacs</a>. Sadly I had no idea about how to use or install a book in the info-system. That had to change a bit and the following will be instruction for me in the future, should I forget how to bring the greatest CS-book of the 80ies into one of the greatest programs from the 80ies.</p>
+
+<!-- more -->
+
+
+<p>In the search for information on info, I found that there is a lot of documentation missing from my relatively recent Debian install. Most of the more interesting parts on info are in the package &ldquo;texinfo-doc-nonfree&rdquo;. I suggest to install it on every system, because the <a href="http://www.gnu.org/software/texinfo/manual/texinfo/html_node/index.html">info system</a> is very cool and it is very rewarding t read its manual. What I don&rsquo;t understand is the &ldquo;nonfree&rdquo; part: should it not be free software as a part of the GNU-project?
+So the first step is this:</p>
+
+<pre><code>sudo apt-get install texinfo-doc-nonfree 
+</code></pre>
+
+<p>After that, I downloaded the Info-version of SICP, that can be found on the <a href="http://www.neilvandyke.org/sicp-texi/">website of Neil van Dyke</a>.</p>
+
+<p>This file has to be moved to a &ldquo;info directory&rdquo;. The manual mentioned above explains how to build one, but I just used the one used by Emacs and gave the file the necessary permissions:</p>
+
+<pre><code>sudo cp sicp.info.gz /usr/local/share/info/
+sudo chmod 644 /usr/local/share/info/sicp.info.gz 
+</code></pre>
+
+<p>The rest of the installation is done by &ldquo;<a href="http://www.gnu.org/software/texinfo/manual/texinfo/html_node/Invoking-install_002dinfo.html">install-info</a>&rdquo;:</p>
+
+<pre><code>sudo install-info /usr/local/share/info/sicp.info.gz /usr/local/share/info/dir
+</code></pre>
+
+<p>This all of course works primarily on Debian-GNU/Linux, but some good advice for info on Windows seems to be found in this blogpost: <a href="http://pchristensen.com/blog/articles/setting-up-and-using-emacs-infomode/">http://pchristensen.com/blog/articles/setting-up-and-using-emacs-infomode/</a></p>
+
+<p>My complete reading setup for SICP now looks like this:</p>
+
+<p><img src="/images/2014-10-sicp-in-emacs.png" alt="A screenshot of Emacs with three frames: sicp, a source code file and a scheme REPL" /></p>
+
+<p>It looks like I am not the only one who likes this technological opportunity <a href="https://www.flickr.com/photos/redbike/5324820738/in/photostream/">enough to make a screenshot</a></p>
+
+<p>If you need some convincing, why reading SICP in the first place is a good idea, you might read this article: <a href="http://hackerretreat.com/why-how-start-sicp/">Why and how to start your sicp trek</a></p>
+
+<p>As RMS tends to say: &ldquo;Happy hacking!&rdquo;</p>
+]]></content>
+  </entry>
+  
+</feed>

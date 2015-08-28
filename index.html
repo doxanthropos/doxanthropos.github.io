@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Fragmented Notes</title>
+  <meta name="author" content="Knut Jackowski">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="This week was the start of two courses (Creative Coding on Futurelearn and Creative Programming for Digital Media &amp; Mobile Apps on Coursera.org &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,11 +21,12 @@
   <link rel="canonical" href="http://doxanthropos.github.io/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Fragmented Notes" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/processing.min.js"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -36,15 +37,17 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">Fragmented Notes</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>This is where I write about learning to code</h2>
   
 </hgroup>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=DoxanthroposBlog&amp;loc=en_US" rel="subscribe-email" title="subscribe via email">Email</a></li>
   
 </ul>
   
@@ -58,6 +61,8 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/links">Links</a></li>
 </ul>
 
 </nav>
@@ -65,6 +70,327 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/08/09/creative-coding-again/">Creative Coding With Processing ... Again</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-08-09T14:53:56+02:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:53 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This week was the start of two courses (<a href="https://www.futurelearn.com/courses/creative-coding">Creative Coding on Futurelearn</a> and <a href="https://www.coursera.org/course/digitalmedia">Creative Programming for Digital Media &amp; Mobile Apps on Coursera.org</a> about creative programming in <a href="https://processing.org/">Processing</a>) and I blogged about them in my <a href="http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing/">main blog</a>.
+Since I have already done some of the assignments some time ago, I focused on some things that I knew about, but did not do so far.</p>
+
+<h2>Creating gifs</h2>
+
+<p>There are basically two simple ways to create gifs from Processing sketches (that&rsquo;s what the single programs are called in the Processing world) and both are explained by <a href="http://www.jeromeherr.space/">Jerome Herr</a> on <a href="http://p5art.tumblr.com/">his Tumblr</a>:</p>
+
+<ol>
+<li><a href="http://p5art.tumblr.com/post/98291300538/turning-a-processing-sketch-into-an-animated-gif">Save single frame images and combine them later with other tools</a> or</li>
+<li><a href="http://p5art.tumblr.com/post/76979034572/exporting-sketches-as-animated-gifs-in-processing">use a library that creates the gif while the program is running</a>.</li>
+</ol>
+
+
+<p>I tried both and both worked fine, at least in part. I was able to install <a href="http://www.lcdf.org/gifsicle/">gifsicle</a>, but it would not run properly so I did what anyone would do who already has some experience with <a href="http://www.imagemagick.org/index.php">ImageMagick</a>, I used the usual <a href="https://www.tjhsst.edu/~dhyatt/supercomp/n401a.html">convert</a> to do the trick.</p>
+
+<p>I will need some more tries to determine, which method to use more because they seem to have different effects on the speed of execution of the sketches. This doesn&rsquo;t really matter, when the animations are generated by code alone, because the framerate will be the same for the exection as for the gif, but it produces much different output when human interaction is part of the sketch.</p>
+
+<p>So probably there will be more here about <a href="https://processing.org/">Processing</a> in the near future. By the way, the mentioned Tumblr from Jerome also has a <a href="http://p5art.tumblr.com/tutorials">nice list of learning ressources for Processing</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/02/26/sharing-with-diaspora/">Sharing With Diaspora</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-02-26T21:28:11+01:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:28 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In the last weeks, I had some reasons to think about privacy issues and social networks. I stopped using Facebook and began using <a href="https://diasporafoundation.org/">Diaspora*</a> and <a href="https://www.gnu.org/software/social/">GNU/Social</a> more than before. So when I found a <a href="https://sharetodiaspora.github.io/about/">sharing service</a> earlier today, to share webpages into the Diaspora * <a href="http://the-federation.info/">Federation</a>, I used it as an excuse to get rid of the Twitter button and the Disqus comments and put in the Code to share to Diaspora * .</p>
+
+<p>If you want to do the same, you will find the part of Octopress, that covers the sharing codes in &ldquo;source/_includes/post/sharing.html&rdquo;. Just put in the code from the sharing site and you are good to go:</p>
+
+<figure class='code'><figcaption><span>Diaspora sharing link, without JavaScript</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://sharetodiaspora.github.io/?title=Your title here&amp;url=http://www.example.com/some/path&quot;</span> <span class="na">target=</span><span class="s">&quot;_blank&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://sharetodiaspora.github.io/favicon.png&quot;</span> <span class="na">style=</span><span class="s">&quot;border: 0px solid;&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I only changed it a little, of course filling in the template code for the post-title and post-url:</p>
+
+<figure class='code'><figcaption><span>Diaspora sharing link with Octopress Tags (diaspora.html)</span> <a href='/downloads/code/diaspora.html'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://sharetodiaspora.github.io/?title={{ page.title }}&amp;url={{ site.url }}{{ page.url }}&quot;</span> <span class="na">target=</span><span class="s">&quot;_blank&quot;</span> <span class="na">style=</span><span class="s">&quot;font-size: 0.85;&quot;</span><span class="nt">&gt;</span>Share on Diaspora<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://sharetodiaspora.github.io/favicon.png&quot;</span> <span class="na">style=</span><span class="s">&quot;border: 0px solid;&quot;</span> <span class="nt">/&gt;&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/11/learning-python/">Learning Python: Free Resources</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-11T14:51:15+01:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:51 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is a list of free online books and other resources for anybody interested in learning the Python programming language. There are other lists out there, this one contains only items, that I have personally tried and found useful.</p>
+
+<ul>
+<li><a href="http://www.codecademy.com/">Codecademy</a>: A website with interactive tutorials.</li>
+<li><a href="http://www.pythonlearn.com/">PythonLearn</a>: A website and a book with videos and autograded exercises. It is the material used for the Coursera-course <a href="https://www.coursera.org/course/pythonlearn">Programming for Everybody</a> by Charles Severance.</li>
+<li><a href="https://www.udacity.com/course/cs101">Udacity: Intro to Computer Science &amp; Programming CS 101</a>: A complete introduction to Computer Science with Python.</li>
+<li><a href="http://www.greenteapress.com/thinkpython/">Think Python: How to Think Like a Computer Scientist</a>: A book that is also an introduction to Computer Science as well as an introduction to Python. If you have succeded in learning Python (at least to a reasonable degree), the author might still be of interest to you, there are some more advanced books on his website.</li>
+<li><a href="http://learnpythonthehardway.org/book/">Learn Python The Hard Way</a>: A very good book about Python and Programming in general. Not really hard.</li>
+<li>Last but not least: <a href="https://docs.python.org/2/tutorial/index.html">The Python Tutorial</a> - The official tutorial by Python.org.</li>
+</ul>
+
+
+<p>Have fun!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/05/setting-up-the-tools-for-cs-50/">Setting Up the Tools for CS 50</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-05T13:45:11+01:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:45 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So CS 50 has officially begun. Time to get my computer ready for the work.</p>
+
+<p>The installation and use of the appliance is covered in great detail on the coursepages, so there is no need to describe it here. What I do different is that I plan to work mostly outside of the appliance, because my computer is barely able to run it and it is a pain in the backside to use it for longer periods (It&rsquo;s an old laptop, that wasn&rsquo;t powerful even when it was new.).</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/01/05/setting-up-the-tools-for-cs-50/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/">SICP in Emacs: Reading in the info-Buffer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-10-09T22:21:44+02:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:21 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Structure and Interpretation of Computer Programs, short <a href="http://mitpress.mit.edu/sicp/">SICP</a> is a great book and <a href="http://www.gnu.org/software/emacs/">Emacs</a> is a great tool for all things about text. So it is only natural to use one with the other and yesterday I stumbled upon this blogpost: <a href="http://jugglingbits.wordpress.com/2009/12/04/sicp-in-emacs/">SICP in Emacs</a>. Sadly I had no idea about how to use or install a book in the info-system. That had to change a bit and the following will be instruction for me in the future, should I forget how to bring the greatest CS-book of the 80ies into one of the greatest programs from the 80ies.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/06/13/blogging-about-processing/">Blogging About Processing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-06-13T14:56:31+02:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>2:56 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Some notes about Processing</p>
+
+<h3>Creative Coding MOOC</h3>
+
+<p>Since last week there is a course about creative coding on <a href="https://www.futurelearn.com" title="a mooc provider">Futurelearn</a>, held by John McCormack from the Monash University. It started great and was already very successful in motivating the participants to combine art and programming. The language of choice is <a href="http://processing.org/">Processing</a>, a Java-based language, that provides easy access to the kind of functions that are usually needed to make art on the computer.</p>
+
+<h4>Showing Processing on the web</h4>
+
+<p>Since art wants to be seen, there is of course a need to have a way of showing the code and its running examples to others. Processing already comes with some ways to do that. You can for example build an android app from your code or a standalone Java-Program. But the way to go, to show something to an audience today qould of course be the web.</p>
+
+<h4>Openprocessing and sketchpad</h4>
+
+<p>Two websites are explicitely dedicated to the cause of showcasing Processing-sketches: <a href="http://www.openprocessing.org/">Openprocessing</a> and <a href="http://sketchpad.cc/">Sketchpad</a>. Both provide not only the possibility to share your existing sketches and show them online, but also to create new ones online.</p>
+
+<h4>Processing.js</h4>
+
+<p>Both these sites use <a href="http://processingjs.org/">Processing.js</a>, a port of the Processing language to Javascript. With Processing.js, it is possible to run sketches in any browser that supports modern web technologies (Javascript, Canvas). So theoretically it is possible, to show sketches on any webpage, not only on the sites that are built to do that. For example on your own website or blog. The pragmatic way to achieve that, would be to embed sketches from Openprocessing or Sketchpad in that site, but why not go the fully self sufficient route?</p>
+
+<h4>simple HTML-page</h4>
+
+<p>There is not much to know, to use Processing on a simple html-page. All the steps are explained on the <a href="http://processingjs.org/articles/p5QuickStart.html">Quick Start Article</a> from Processing.js.
+In short: You just put the Prcessing.js file in place, where you store your other Javascripts, load them in the head of your webpage and ten you can add a Canvas element, that loads your sketch.</p>
+
+<h4>Octopress</h4>
+
+<p>But what, if your website is done the hacker way, if it is an <a href="http://octopress.org/">octopress</a> blog on github?</p>
+
+<p>Basically it&rsquo;s the same as using Processing.js on any other html-page.</p>
+
+<h4>Where to put the Processing.js?</h4>
+
+<p>Octopress has a folder named &ldquo;javascripts&rdquo; and that would be where to put the Processing.js file. Of course, you will want to put it in the source/javascripts folder, so that it will not vanish when you rebuild the blog.</p>
+
+<h4>Where is the head of my template?</h4>
+
+<p>Since the Javascript is usually placed in the head-section of a webpage, you need to put the reference to Processing.js into the head.html file that is located in the source/_includes folder in the same place, where you find the other Javascript references. It will look somewhat like this:</p>
+
+<pre><code>&lt;script src="/javascripts/processing.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h4>Making your sketches a comfortable home</h4>
+
+<p>To have some order in my files, I decided to make a folder with the name &ldquo;processing&rdquo; for all the sketches, that I might want to share with the world. Of course also in the &ldquo;source&rdquo; folder. Now I can put any sketch that I want to include in a blogpost in this folder and load it into a canvas-element, just like this:</p>
+
+<pre><code>&lt;center&gt;
+&lt;canvas data-processing-sources="/processing/tutorial.pde"&gt;&lt;/canvas&gt;
+&lt;/center&gt;
+</code></pre>
+
+<p>This is the a sketch from the <a href="http://processing.org/tutorials/gettingstarted/">&ldquo;getting started&rdquo; tutorial</a> on the processing site and on this blog it looks like this:</p>
+
+<center>
+<canvas data-processing-sources="/processing/tutorial.pde"></canvas>
+</center>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/23/hallo-welt/">Hallo Welt</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-05-23T15:46:55+02:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>3:46 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Einfach mal: &ldquo;Hallo!&rdquo;</p>
+
+<p>Nachdem ich dieses Blog nun eingerichtet habe, könnte es sein, dass ich hier auch mal was schreibe.</p>
+</div>
+  
+  
+
+
+    </article>
   
   <div class="pagination">
     
@@ -78,7 +404,56 @@
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
+        <a href="/blog/2015/08/09/creative-coding-again/">Creative Coding With Processing ... Again</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/26/sharing-with-diaspora/">Sharing With Diaspora</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/11/learning-python/">Learning Python: Free Resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/05/setting-up-the-tools-for-cs-50/">Setting Up the Tools for CS 50</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/">SICP in Emacs: Reading in the info-Buffer</a>
+      </li>
+    
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/doxanthropos">@doxanthropos</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'doxanthropos',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
@@ -91,12 +466,25 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Your Name -
+  Copyright &copy; 2015 - Knut Jackowski -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'doxanthropossblog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Socialnetworks | Fragmented Notes]]></title>
+  <link href="http://doxanthropos.github.io/blog/categories/socialnetworks/atom.xml" rel="self"/>
+  <link href="http://doxanthropos.github.io/"/>
+  <updated>2015-08-28T15:15:41+02:00</updated>
+  <id>http://doxanthropos.github.io/</id>
+  <author>
+    <name><![CDATA[Knut Jackowski]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sharing With Diaspora]]></title>
+    <link href="http://doxanthropos.github.io/blog/2015/02/26/sharing-with-diaspora/"/>
+    <updated>2015-02-26T21:28:11+01:00</updated>
+    <id>http://doxanthropos.github.io/blog/2015/02/26/sharing-with-diaspora</id>
+    <content type="html"><![CDATA[<p>In the last weeks, I had some reasons to think about privacy issues and social networks. I stopped using Facebook and began using <a href="https://diasporafoundation.org/">Diaspora*</a> and <a href="https://www.gnu.org/software/social/">GNU/Social</a> more than before. So when I found a <a href="https://sharetodiaspora.github.io/about/">sharing service</a> earlier today, to share webpages into the Diaspora * <a href="http://the-federation.info/">Federation</a>, I used it as an excuse to get rid of the Twitter button and the Disqus comments and put in the Code to share to Diaspora * .</p>
+
+<p>If you want to do the same, you will find the part of Octopress, that covers the sharing codes in &ldquo;source/_includes/post/sharing.html&rdquo;. Just put in the code from the sharing site and you are good to go:</p>
+
+<pre><code class="html Diaspora sharing link, without JavaScript">&lt;a href="http://sharetodiaspora.github.io/?title=Your title here&amp;url=http://www.example.com/some/path" target="_blank"&gt;
+&lt;img src="http://sharetodiaspora.github.io/favicon.png" style="border: 0px solid;" /&gt;
+&lt;/a&gt;
+</code></pre>
+
+<p>I only changed it a little, of course filling in the template code for the post-title and post-url:</p>
+
+<p><figure class='code'><figcaption><span>Diaspora sharing link with Octopress Tags (diaspora.html)</span> <a href='/downloads/code/diaspora.html'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://sharetodiaspora.github.io/?title={{ page.title }}&amp;url={{ site.url }}{{ page.url }}&quot;</span> <span class="na">target=</span><span class="s">&quot;_blank&quot;</span> <span class="na">style=</span><span class="s">&quot;font-size: 0.85;&quot;</span><span class="nt">&gt;</span>Share on Diaspora<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://sharetodiaspora.github.io/favicon.png&quot;</span> <span class="na">style=</span><span class="s">&quot;border: 0px solid;&quot;</span> <span class="nt">/&gt;&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+]]></content>
+  </entry>
+  
+</feed>

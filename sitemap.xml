@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://doxanthropos.github.io/blog/2015/08/09/creative-coding-again/</loc>
+    <lastmod>2015-08-09T14:53:56+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/2015/02/26/sharing-with-diaspora/</loc>
+    <lastmod>2015-02-26T21:28:11+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/2015/01/11/learning-python/</loc>
+    <lastmod>2015-01-11T14:51:15+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/2015/01/05/setting-up-the-tools-for-cs-50/</loc>
+    <lastmod>2015-01-05T13:45:11+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/</loc>
+    <lastmod>2014-10-09T22:21:44+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing/</loc>
+    <lastmod>2014-06-13T14:56:31+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/2014/05/23/hallo-welt/</loc>
+    <lastmod>2014-05-23T15:46:55+02:00</lastmod>
+  </url>
+  <url>
     <loc>http://doxanthropos.github.io/</loc>
   </url>
   <url>
     <loc>http://doxanthropos.github.io/blog/archives/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/links/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/about/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/conversational/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/processing/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/creative/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/coding/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/emacs/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/sicp/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/linux/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/python/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/socialnetworks/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/downloads/code/diaspora.html</loc>
+    <lastmod>2015-08-28T14:21:28+02:00</lastmod>
   </url>
 </urlset>

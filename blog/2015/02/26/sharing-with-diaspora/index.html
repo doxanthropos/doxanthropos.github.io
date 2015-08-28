@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Sharing With Diaspora - Fragmented Notes</title>
+  <meta name="author" content="Knut Jackowski">
+
+  
+  <meta name="description" content="In the last weeks, I had some reasons to think about privacy issues and social networks. I stopped using Facebook and began using Diaspora* and GNU/ &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://doxanthropos.github.io/blog/2015/02/26/sharing-with-diaspora/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Fragmented Notes" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/processing.min.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Fragmented Notes</a></h1>
+  
+    <h2>This is where I write about learning to code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=DoxanthroposBlog&amp;loc=en_US" rel="subscribe-email" title="subscribe via email">Email</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="doxanthropos.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/links">Links</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Sharing With Diaspora</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-02-26T21:28:11+01:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:28 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>In the last weeks, I had some reasons to think about privacy issues and social networks. I stopped using Facebook and began using <a href="https://diasporafoundation.org/">Diaspora*</a> and <a href="https://www.gnu.org/software/social/">GNU/Social</a> more than before. So when I found a <a href="https://sharetodiaspora.github.io/about/">sharing service</a> earlier today, to share webpages into the Diaspora * <a href="http://the-federation.info/">Federation</a>, I used it as an excuse to get rid of the Twitter button and the Disqus comments and put in the Code to share to Diaspora * .</p>
+
+<p>If you want to do the same, you will find the part of Octopress, that covers the sharing codes in &ldquo;source/_includes/post/sharing.html&rdquo;. Just put in the code from the sharing site and you are good to go:</p>
+
+<figure class='code'><figcaption><span>Diaspora sharing link, without JavaScript</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://sharetodiaspora.github.io/?title=Your title here&amp;url=http://www.example.com/some/path&quot;</span> <span class="na">target=</span><span class="s">&quot;_blank&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://sharetodiaspora.github.io/favicon.png&quot;</span> <span class="na">style=</span><span class="s">&quot;border: 0px solid;&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I only changed it a little, of course filling in the template code for the post-title and post-url:</p>
+
+<figure class='code'><figcaption><span>Diaspora sharing link with Octopress Tags (diaspora.html)</span> <a href='/downloads/code/diaspora.html'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://sharetodiaspora.github.io/?title={{ page.title }}&amp;url={{ site.url }}{{ page.url }}&quot;</span> <span class="na">target=</span><span class="s">&quot;_blank&quot;</span> <span class="na">style=</span><span class="s">&quot;font-size: 0.85;&quot;</span><span class="nt">&gt;</span>Share on Diaspora<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://sharetodiaspora.github.io/favicon.png&quot;</span> <span class="na">style=</span><span class="s">&quot;border: 0px solid;&quot;</span> <span class="nt">/&gt;&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Knut Jackowski</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-02-26T21:28:11+01:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:28 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/socialnetworks/'>socialnetworks</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://doxanthropos.github.io/blog/2015/02/26/sharing-with-diaspora/" data-via="doxanthropos" data-counturl="http://doxanthropos.github.io/blog/2015/02/26/sharing-with-diaspora/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/01/11/learning-python/" title="Previous Post: Learning Python: Free Resources">&laquo; Learning Python: Free Resources</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2015/08/09/creative-coding-again/" title="Next Post: Creative Coding with Processing ... Again">Creative Coding with Processing ... Again &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/08/09/creative-coding-again/">Creative Coding With Processing ... Again</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/26/sharing-with-diaspora/">Sharing With Diaspora</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/11/learning-python/">Learning Python: Free Resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/05/setting-up-the-tools-for-cs-50/">Setting Up the Tools for CS 50</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/09/sicp-in-emacs-reading-in-the-info-buffer/">SICP in Emacs: Reading in the info-Buffer</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/doxanthropos">@doxanthropos</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'doxanthropos',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Knut Jackowski -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'doxanthropossblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://doxanthropos.github.io/blog/2015/02/26/sharing-with-diaspora/';
+        var disqus_url = 'http://doxanthropos.github.io/blog/2015/02/26/sharing-with-diaspora/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
