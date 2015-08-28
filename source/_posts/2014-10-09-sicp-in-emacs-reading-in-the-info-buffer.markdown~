@@ -1,0 +1,39 @@
+---
+layout: post
+title: "SICP in Emacs: Reading in the info-Buffer"
+date: 2014-10-09 22:21:44 +0200
+comments: true
+categories: emacs, sicp
+---
+
+
+
+Structure and Interpretation of Computer Programs, short [SICP](http://mitpress.mit.edu/sicp/) is a great book and [Emacs](http://www.gnu.org/software/emacs/) is a great tool for all things about text. So it is only natural to use one with the other and yesterday I stumbled upon this blogpost: [SICP in Emacs](http://jugglingbits.wordpress.com/2009/12/04/sicp-in-emacs/). Sadly I had no idea about how to use or install a book in the info-system. That had to change a bit and the following will be instruction for me in the future, should I forget how to bring the greatest CS-book of the 80ies into one of the greatest programs from the 80ies.
+<!-- more -->
+In the search for information on info, I found that there is a lot of documentation missing from my relatively recent Debian install. Most of the more interesting parts on info are int the package "texinfo-doc-nonfree". I suggest to install it on every system, because the [info system](http://www.gnu.org/software/texinfo/manual/texinfo/html_node/index.html) is very cool and it is very rewarding t read its manual. What I don't understand is the "nonfree" part: should it not be free software as a part of the GNU-project?
+So the first step is this:
+
+    sudo apt-get install texinfo-doc-nonfree 
+
+After that, I downloaded the Info-version of SICP, that can be found on the [website of Neil van Dyke](http://www.neilvandyke.org/sicp-texi/).
+
+This file has to be moved to a "info directory". The manual mentioned above expkains how to build one, but I just used the one used by Emacs and gave the file the necessary permissions:
+
+    sudo cp sicp.info.gz /usr/local/share/info/
+    sudo chmod 644 /usr/local/share/info/sicp.info.gz 
+
+The rest of the installation is done by "[install-info](http://www.gnu.org/software/texinfo/manual/texinfo/html_node/Invoking-install_002dinfo.html)":
+
+    sudo install-info /usr/local/share/info/sicp.info.gz /usr/local/share/info/dir
+
+This all of course works primarily on Debian-GNU/Linux, but some good advice for info on Windows seems to be found in this blogpost: http://pchristensen.com/blog/articles/setting-up-and-using-emacs-infomode/
+
+My complete reading setup for SICP now looks like this:
+
+![A screenshot of Emacs with three frames: sicp, a source code file and a scheme REPL](/images/2014-10-sicp-in-emacs.png)
+
+It looks like I am not the only one who likes this technological opportunity [enough to make a screenshot](https://www.flickr.com/photos/redbike/5324820738/in/photostream/)
+
+If you need some convincing, why reading SICP in the first place is a good idea, you might read this article: [Why and how to start your sicp trek](http://hackerretreat.com/why-how-start-sicp/)
+
+As RMS tends to say: "Happy hacking!"
