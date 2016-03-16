@@ -4,7 +4,7 @@
   <title><![CDATA[Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2016-03-16T08:06:28+01:00</updated>
+  <updated>2016-03-16T08:49:13+01:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -199,6 +199,21 @@ Since I have already done some of the assignments some time ago, I focused on so
 
 
 <p>That went well. It seems like I am ready to dive into the coding problems and need only use the appliance for submitting the solutions. On the side, I have become somewhat comfortable with the functions, that <a href="http://octopress.org">Octopress</a> provides for embedding code into blogposts.</p>
+
+<h2>UPDATES</h2>
+
+<p>If you want your c compiler to work exactly like the one in the appliance, you will have to first install the clang compiler and then set a few variables for your shell. You best do the latter in your .bashrc:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">CC</span><span class="o">=</span>clang
+</span><span class='line'><span class="nb">export </span><span class="nv">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-ggdb3 -O0 -std=c99 -Wall -Werror&quot;</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">LDLIBS</span><span class="o">=</span><span class="s2">&quot;-lcs50 -lm&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   

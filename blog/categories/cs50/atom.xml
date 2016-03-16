@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Cs50 | Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/blog/categories/cs50/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2016-03-16T08:06:28+01:00</updated>
+  <updated>2016-03-16T08:49:13+01:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -90,6 +90,15 @@ hello.c:6:1: warning: control reaches end of non-void function [-Wreturn-type]
 </code></pre>
 
 <p>That went well. It seems like I am ready to dive into the coding problems and need only use the appliance for submitting the solutions. On the side, I have become somewhat comfortable with the functions, that <a href="http://octopress.org">Octopress</a> provides for embedding code into blogposts.</p>
+
+<h2>UPDATES</h2>
+
+<p>If you want your c compiler to work exactly like the one in the appliance, you will have to first install the clang compiler and then set a few variables for your shell. You best do the latter in your .bashrc:</p>
+
+<pre><code class="bash">export CC=clang
+export CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror"
+export LDLIBS="-lcs50 -lm"
+</code></pre>
 ]]></content>
   </entry>
   
