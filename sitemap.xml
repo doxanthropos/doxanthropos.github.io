@@ -42,10 +42,10 @@
     <loc>http://doxanthropos.github.io/links/</loc>
   </url>
   <url>
-    <loc>http://doxanthropos.github.io/about/</loc>
+    <loc>http://doxanthropos.github.io/courses/</loc>
   </url>
   <url>
-    <loc>http://doxanthropos.github.io/courses/</loc>
+    <loc>http://doxanthropos.github.io/about/</loc>
   </url>
   <url>
     <loc>http://doxanthropos.github.io/blog/categories/conversational/</loc>
@@ -67,6 +67,9 @@
   </url>
   <url>
     <loc>http://doxanthropos.github.io/blog/categories/linux/</loc>
+  </url>
+  <url>
+    <loc>http://doxanthropos.github.io/blog/categories/cs50/</loc>
   </url>
   <url>
     <loc>http://doxanthropos.github.io/blog/categories/python/</loc>
