@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Conversational | Fragmented Notes]]></title>
-  <link href="http://doxanthropos.github.io/blog/categories/conversational/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Thoughts | Fragmented Notes]]></title>
+  <link href="http://doxanthropos.github.io/blog/categories/thoughts/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
   <updated>2016-03-25T10:53:09+01:00</updated>
   <id>http://doxanthropos.github.io/</id>
@@ -32,17 +32,6 @@
 <p>So why do I like the design of a website, that in 2016 uses elements of the 80ies and 90ies for an art community? Because that was a time, when the new and exiting possibilites of the computer (mostly with the rise of home computers and for example the demo scene) and the web were first discovered and bright futures of communication, collaboration and art were envisioned. The time of the first blogs, that did not have this name yet and of countless personal homepages, that were handcrafted by people just learning the art of creating for the web, without existing conventions. The web was not a place of the big players of today. No Amazon or Google, no Facebook or even Wikipedia, just a network of people exploring the possibilities of this new and undiscovered medium. This feeling of open possibilities, of an open and undiscovered world, is in many ways lost today, but it is really fitting for a community of digital artists.</p>
 
 <p>It is a good starting point for opening up again the horizon of creativity and possibility.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hallo Welt]]></title>
-    <link href="http://doxanthropos.github.io/blog/2014/05/23/hallo-welt/"/>
-    <updated>2014-05-23T15:46:55+02:00</updated>
-    <id>http://doxanthropos.github.io/blog/2014/05/23/hallo-welt</id>
-    <content type="html"><![CDATA[<p>Einfach mal: &ldquo;Hallo!&rdquo;</p>
-
-<p>Nachdem ich dieses Blog nun eingerichtet habe, könnte es sein, dass ich hier auch mal was schreibe.</p>
 ]]></content>
   </entry>
   

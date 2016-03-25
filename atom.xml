@@ -4,7 +4,7 @@
   <title><![CDATA[Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2016-03-16T08:49:13+01:00</updated>
+  <updated>2016-03-25T10:53:09+01:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Retrofuturism of the Web]]></title>
+    <link href="http://doxanthropos.github.io/blog/2016/03/25/retrofuturism-of-the-web/"/>
+    <updated>2016-03-25T08:50:00+01:00</updated>
+    <id>http://doxanthropos.github.io/blog/2016/03/25/retrofuturism-of-the-web</id>
+    <content type="html"><![CDATA[<p>A few days ago I was inveted to take part in a project, that is going to be a platform for online art. Although I am not a digital artist, at most I want to become one in the course of my studies, I was glad about the invitation and quickly took a look at the <a href="http://mkblv.space/">website of this project</a>. The design was quite unique, featuring elements of a Windows 95 desktop between the presented art and fonts that remind the visitor of the computers of the 80ies or 90ies. At the first visit, I just simply liked the look, probably mostly out of nostalgia and the remembrance of seemingly simpler times, but at the second visit (which was on e newer version, but with similar elements), I started to think more about the choice of design.</p>
+
+<!-- more -->
+
+
+<p>Going back into the past can serve different purposes. The most common would probably be the one, I had when I first visited the website: nostalgia and remembrance. But there are others.</p>
+
+<p>Especially in the firmly established field of fiction called retrofuturism, of which genres like steampunk and also less obvious cyberpunk are variations, the main point is not nostalgia, but the exploration of different possibilities. Like the philosopher Hans Blumenberg described in his book <a href="http://www.amazon.de/Lesbarkeit-Welt-suhrkamp-taschenbuch-wissenschaft/dp/3518281925">&ldquo;Die Lesbarkeit der Welt&rdquo;</a> (The Readability of the World): &ldquo;What was the world, that one believed to be possible?&rdquo; (roughly translated by me). And for more activist purposes this point can also go further into the direction of reclaiming futures that seem to be lost to the profanity of that what really happend after the point at which one percieves these possibilities of a different future.</p>
+
+<p>For a genre like steampunk this would be the possibility of a world, where the process of inovation and invention did not fully fall into the hands of the industry and capitalist mass production, but at least to a significant degree was still in the hands of geniuses, who are not only proficient in their engineering, but also in art and gentleman/womanship and who are not restricted in their visions, by the limitations of the market and the viability of their products for the many. Similar perspectives do relate to the genre of cyberpunk, that was established in the 80ies as a science fiction genre, but now has joined the other genres of retrofuturism, because its futures are now past us, without having been real.</p>
+
+<p>So why do I like the design of a website, that in 2016 uses elements of the 80ies and 90ies for an art community? Because that was a time, when the new and exiting possibilites of the computer (mostly with the rise of home computers and for example the demo scene) and the web were first discovered and bright futures of communication, collaboration and art were envisioned. The time of the first blogs, that did not have this name yet and of countless personal homepages, that were handcrafted by people just learning the art of creating for the web, without existing conventions. The web was not a place of the big players of today. No Amazon or Google, no Facebook or even Wikipedia, just a network of people exploring the possibilities of this new and undiscovered medium. This feeling of open possibilities, of an open and undiscovered world, is in many ways lost today, but it is really fitting for a community of digital artists.</p>
+
+<p>It is a good starting point for opening up again the horizon of creativity and possibility.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Adventures in Web Animations]]></title>
