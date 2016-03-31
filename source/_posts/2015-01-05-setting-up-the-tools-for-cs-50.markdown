@@ -3,7 +3,7 @@ layout: post
 title: "Setting up the tools for CS 50"
 date: 2015-01-05 13:45:11 +0100
 comments: true
-categories: linux
+categories: linux, cs50
 ---
 
 So CS 50 has officially begun. Time to get my computer ready for the work. 
@@ -48,6 +48,17 @@ $ check50 2014.fall.pset1.hello hello.c
 ```
 
 That went well. It seems like I am ready to dive into the coding problems and need only use the appliance for submitting the solutions. On the side, I have become somewhat comfortable with the functions, that [Octopress][5] provides for embedding code into blogposts.
+
+## UPDATES
+
+If you want your c compiler to work exactly like the one in the appliance, you will have to first install the clang compiler and then set a few variables for your shell. You best do the latter in your .bashrc:
+
+``` bash
+export CC=clang
+export CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror"
+export LDLIBS="-lcs50 -lm"
+```
+
 
 [1]: https://medium.com/@ddiipp/take-harvards-cs50-without-cs50-appliance-8372acb91314
 [2]: https://manual.cs50.net/library/

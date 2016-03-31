@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Retrofuturism of the Web"
+date: 2016-03-25 09:50:00 +0200
+comments: true
+categories: thoughts conversational
+---
+
+A few days ago I was inveted to take part in a project, that is going to be a platform for online art. Although I am not a digital artist, at most I want to become one in the course of my studies, I was glad about the invitation and quickly took a look at the [website of this project][0]. The design was quite unique, featuring elements of a Windows 95 desktop between the presented art and fonts that remind the visitor of the computers of the 80ies or 90ies. At the first visit, I just simply liked the look, probably mostly out of nostalgia and the remembrance of seemingly simpler times, but at the second visit (which was on e newer version, but with similar elements), I started to think more about the choice of design.
+<!-- more -->
+Going back into the past can serve different purposes. The most common would probably be the one, I had when I first visited the website: nostalgia and remembrance. But there are others.
+
+Especially in the firmly established field of fiction called retrofuturism, of which genres like steampunk and also less obvious cyberpunk are variations, the main point is not nostalgia, but the exploration of different possibilities. Like the philosopher Hans Blumenberg described in his book ["Die Lesbarkeit der Welt"][1] (The Readability of the World): "What was the world, that one believed to be possible?" (roughly translated by me). And for more activist purposes this point can also go further into the direction of reclaiming futures that seem to be lost to the profanity of that what really happend after the point at which one percieves these possibilities of a different future.
+
+For a genre like steampunk this would be the possibility of a world, where the process of inovation and invention did not fully fall into the hands of the industry and capitalist mass production, but at least to a significant degree was still in the hands of geniuses, who are not only proficient in their engineering, but also in art and gentleman/womanship and who are not restricted in their visions, by the limitations of the market and the viability of their products for the many. Similar perspectives do relate to the genre of cyberpunk, that was established in the 80ies as a science fiction genre, but now has joined the other genres of retrofuturism, because its futures are now past us, without having been real.
+
+So why do I like the design of a website, that in 2016 uses elements of the 80ies and 90ies for an art community? Because that was a time, when the new and exiting possibilites of the computer (mostly with the rise of home computers and for example the demo scene) and the web were first discovered and bright futures of communication, collaboration and art were envisioned. The time of the first blogs, that did not have this name yet and of countless personal homepages, that were handcrafted by people just learning the art of creating for the web, without existing conventions. The web was not a place of the big players of today. No Amazon or Google, no Facebook or even Wikipedia, just a network of people exploring the possibilities of this new and undiscovered medium. This feeling of open possibilities, of an open and undiscovered world, is in many ways lost today, but it is really fitting for a community of digital artists.
+
+It is a good starting point for opening up again the horizon of creativity and possibility.
+
+[0]: http://mkblv.space/
+[1]: http://www.amazon.de/Lesbarkeit-Welt-suhrkamp-taschenbuch-wissenschaft/dp/3518281925
