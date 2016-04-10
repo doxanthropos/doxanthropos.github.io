@@ -14,6 +14,7 @@ Here is a short list:
 
 - [The Data Scientist’s Toolbox][datatoolbox]
 - [Interactivity with JavaScript][interactivejs]
+- [Advanced Styling with Responsive Design][advresp]
 - [Responsive Website Basics: Code with HTML, CSS, and JavaScript ][responsive01]
 - [Introduction to Software Product Management][spm01]
 - [Adventures in Web Animations][adventurewa]
@@ -21,6 +22,7 @@ Here is a short list:
 
 [datatoolbox]:https://www.coursera.org/course/datascitoolbox
 [interactivejs]:https://www.coursera.org/learn/javascript
+[advresp]:{{ site.url }}/blog/2016/04/10/review-advanced-styling-with-responsive-design/
 [responsive01]:https://www.coursera.org/learn/website-coding
 [spm01]:https://www.coursera.org/learn/introduction-to-software-product-management
 [adventurewa]:{{ site.url }}/blog/2016/03/08/adventures-in-web-animation/
