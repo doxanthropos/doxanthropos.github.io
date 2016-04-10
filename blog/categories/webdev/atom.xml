@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Webdev | Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/blog/categories/webdev/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2016-03-25T10:53:09+01:00</updated>
+  <updated>2016-04-10T12:17:56+02:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Advanced Styling With Responsive Design]]></title>
+    <link href="http://doxanthropos.github.io/blog/2016/04/10/review-advanced-styling-with-responsive-design/"/>
+    <updated>2016-04-10T11:38:03+02:00</updated>
+    <id>http://doxanthropos.github.io/blog/2016/04/10/review-advanced-styling-with-responsive-design</id>
+    <content type="html"><![CDATA[<p>Yesterday I finished the course &ldquo;<a href="https://www.coursera.org/learn/responsivedesign">Advanced Styling with Responsive Design</a>&rdquo; on Coursera. It is the fourth course of the &ldquo;<a href="https://www.coursera.org/specializations/web-design">Web Design for Everybody</a>&rdquo; specialization from the University of Michigan and it is taught by Colleen van Lent like the other three courses. Despite the fact, that the technical knowledge this course provides was not all new to me, I think I still have learned a lot.</p>
+
+<!-- more -->
+
+
+<p>When I discovered the courses of the specialization, I had a look at the first two and skipped them, because they seemed to be on a more introductory level, than what I thought, that I would need. The first one that I actually took and also finished was the &ldquo;<a href="https://www.coursera.org/learn/javascript">Interactivity with JavaScript</a>&rdquo; course, the third one in the series and after that the responsive design course.</p>
+
+<p>The content of both courses was mostly not new to me and I don&rsquo;t think, that I have seen JavaScript or CSS in one of them, that I had not seen or even written before.</p>
+
+<p>What made these courses still worthwhile were the lectures by Colleen, because she tried very successfully, not only to talk about the technical details, but to provide always the bigger picture. For example, I knew how to use Bootstrap grids and I had heard about &ldquo;mobile first&rdquo;, but it took this course for me to really understand the connection between the two.</p>
+
+<p>With this connection between the big picture and the details I have gained a lot of new understanding of how to think about web development.</p>
+
+<p>The <a href="https://www.umich.edu/">University of Michigan</a> seems to have good luck in hiring their teachers. I have been kind of a fan of <a href="http://www.dr-chuck.com/">Doctor Chuck</a> for some time now (we use <a href="https://www.imsglobal.org/activity/learning-tools-interoperability">LTI</a> quite often at work and he has done a lot to popularize that standard), who teaches the &ldquo;<a href="https://www.coursera.org/specializations/python">Python for Everybody</a>&rdquo; specialization (I will probably talk about that in another post), but he is clearly not the only great teacher at this University.</p>
+
+<p>I would recommend this course (and the whole specialization) to anybody who wants to learn web design or web development.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Adventures in Web Animations]]></title>

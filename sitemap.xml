@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://doxanthropos.github.io/blog/2016/04/10/review-advanced-styling-with-responsive-design/</loc>
+    <lastmod>2016-04-10T11:38:03+02:00</lastmod>
+  </url>
+  <url>
     <loc>http://doxanthropos.github.io/blog/2016/03/25/retrofuturism-of-the-web/</loc>
     <lastmod>2016-03-25T08:50:00+01:00</lastmod>
   </url>
