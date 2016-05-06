@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Webdev, | Fragmented Notes]]></title>
-  <link href="http://doxanthropos.github.io/blog/categories/webdev/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Courses | Fragmented Notes]]></title>
+  <link href="http://doxanthropos.github.io/blog/categories/courses/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
   <updated>2016-05-06T11:52:16+02:00</updated>
   <id>http://doxanthropos.github.io/</id>
