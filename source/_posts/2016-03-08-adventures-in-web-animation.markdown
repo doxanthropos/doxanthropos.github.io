@@ -3,7 +3,7 @@ layout: post
 title: "Review: Adventures in Web Animations"
 date: 2016-03-08 13:06:39 +0100
 comments: true
-categories: webdev
+categories: webdev, courses
 ---
 
 Last weekend I played through the course "[Adventures in Web Animations][adventurewa]" on Codeschool.com. This was my first Codeschool.com course and I mostly took it, because it was the free weekend, I had nothing else to do, being sick and at home, and because web animation was a topic, that I knew not very well.

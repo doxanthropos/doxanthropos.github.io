@@ -3,7 +3,7 @@ layout: post
 title: "Review: Advanced Styling with Responsive Design"
 date: 2016-04-10 11:38:03 +0200
 comments: true
-categories: webdev
+categories: webdev, courses
 ---
 
 Yesterday I finished the course "[Advanced Styling with Responsive Design][responsivedesign]" on Coursera. It is the fourth course of the "[Web Design for Everybody][webdesign]" specialization from the University of Michigan and it is taught by Colleen van Lent like the other three courses. Despite the fact, that the technical knowledge this course provides was not all new to me, I think I still have learned a lot.
