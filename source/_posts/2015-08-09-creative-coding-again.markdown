@@ -3,7 +3,7 @@ layout: post
 title: "Creative Coding with Processing ... Again"
 date: 2015-08-09 14:53:56 +0200
 comments: true
-categories: 
+categories: processing courses
 ---
 
 This week was the start of two courses ([Creative Coding on Futurelearn][1] and [Creative Programming for Digital Media & Mobile Apps on Coursera.org][2] about creative programming in [Processing][0]) and I blogged about them in my [main blog][5].

@@ -3,10 +3,15 @@ layout: post
 title: "Blogging about Processing"
 date: 2014-06-13 14:56:31 +0200
 comments: true
-categories: processing, creative coding
+categories: processing creative coding
 ---
+
+UPDATE: I removed the processing.js from the head, because it meant unneccessary page load on the blog and because [P5.js](https://p5js.org). It also works, if you put it in the article, like I did here, after the "more"-break, so that it only loads when someone is actually viewing the post that contains the Processing example.
+
 Some notes about Processing
 
+<!-- more -->
+<script src="/javascripts/processing.min.js"></script>
 ### Creative Coding MOOC
 
 Since last week there is a course about creative coding on [Futurelearn](https://www.futurelearn.com "a mooc provider"), held by John McCormack from the Monash University. It started great and was already very successful in motivating the participants to combine art and programming. The language of choice is [Processing](http://processing.org/), a Java-based language, that provides easy access to the kind of functions that are usually needed to make art on the computer.
