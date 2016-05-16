@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Courses | Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/blog/categories/courses/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2016-05-06T11:52:16+02:00</updated>
+  <updated>2016-05-16T11:52:54+02:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -12,6 +12,102 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Minimalist Physics Engine]]></title>
+    <link href="http://doxanthropos.github.io/blog/2016/05/15/a-minimalist-physics-engine/"/>
+    <updated>2016-05-15T13:04:03+02:00</updated>
+    <id>http://doxanthropos.github.io/blog/2016/05/15/a-minimalist-physics-engine</id>
+    <content type="html"><![CDATA[<p><a href="https://twitter.com/shiffman">Daniel Shiffman</a> surprised me yesterday in his course &ldquo;<a href="https://www.kadenze.com/courses/the-nature-of-code">The Nature of Code</a>&rdquo; with a most simple concept of a physics engine in two lines of JavaScript:</p>
+
+<pre><code class="Javascript">pos.add(vel);
+vel.add(acc);
+</code></pre>
+
+<!-- more -->
+
+
+<script src="http://doxanthropos.github.io/javascripts/p5.js"></script>
+
+
+<script src="http://doxanthropos.github.io/javascripts/p5.dom.js"></script>
+
+
+<p>These two lines have the three components(vectors) that are necessary to describe movement: position, velocity and acceleration:</p>
+
+<ol>
+<li>Objects have a position (pos).</li>
+<li>The position gets changed (add) by velocity (vel).</li>
+<li>The velocity gets changed (add) by acceleration (acc).</li>
+</ol>
+
+
+<p>The add-method comes from <a href="https://p5js.org">P5JS</a> and belongs to the <a href="linktothevectorobjectsdocumentation">vector object</a>.</p>
+
+<p>Of course to use it in a sketch, there is more to write than these two lines, but they contain the core concept. For example, this code from the course creates a circle that looks like it is falling, because it accelerates downward:</p>
+
+<pre><code class="Javascript">function Walker(x,y) {
+    this.pos = createVector(x,y);
+    this.vel = createVector(0,0);
+    this.acc = createVector(0,0.1); 
+
+    this.update = function(){
+        this.vel.add(this.acc);
+        this.pos.add(this.vel);
+    }
+
+    this.display = function(){
+        fill(255);
+        ellipse(this.pos.x,this.pos.y,48,48);
+    }
+}
+</code></pre>
+
+<center>
+<button onclick="setup();" style="align:right;">Restart</button>
+</center>
+
+
+<div id="p5canvas"></div>
+
+
+<script>
+var w;
+function setup() {
+    var cnv = createCanvas($("#p5canvas").width(),360);
+    w = new Walker(width/2,0);
+    cnv.parent("p5canvas");
+}
+
+function draw() {
+    background(51);
+    w.display();
+    w.update();
+  
+}
+
+function Walker(x,y) {
+    this.pos = createVector(x,y);
+    this.vel = createVector(0,0);
+    this.acc = createVector(0,0.1); 
+
+    this.update = function(){
+        this.vel.add(this.acc);
+        this.pos.add(this.vel);
+    }
+
+    this.display = function(){
+        fill(255);
+        ellipse(this.pos.x,this.pos.y,48,48);
+    }
+}
+
+</script>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Advanced Styling With Responsive Design]]></title>
@@ -49,6 +145,32 @@
 <p>What I really liked was that this course has an accompanying screencast called &ldquo;<a href="https://www.codeschool.com/screencasts/soup-to-bits-adventures-in-web-animations">Soup to Bits: Adventures in Web Animations</a>&rdquo;. Usually I am not that much of a fan of screencasts for learning, but this one hit the right spot: I shows the instructor of the course Alyssa Nicoll together with another Codeschool.com developer Dan Denney working on an example website that is somewhat complete, but as they conclude, missing animations. So you can follow them for around an hour, how they put together the animations an this website, how they make mistakes and debug them, how they come to decide on the specifics of the animations and so on, until the website is ready. And if you really want to try your new skills, you can do the same, because the website they work on is available as a github repository.</p>
 
 <p>These two parts, the course and the screencast, really work well together. The course sets the ground on which it is possible to go through the screencast without explaining everything and the screencast gives some meat the the bones of still dry and untested knowledge from the course.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Creative Coding With Processing ... Again]]></title>
+    <link href="http://doxanthropos.github.io/blog/2015/08/09/creative-coding-again/"/>
+    <updated>2015-08-09T14:53:56+02:00</updated>
+    <id>http://doxanthropos.github.io/blog/2015/08/09/creative-coding-again</id>
+    <content type="html"><![CDATA[<p>This week was the start of two courses (<a href="https://www.futurelearn.com/courses/creative-coding">Creative Coding on Futurelearn</a> and <a href="https://www.coursera.org/course/digitalmedia">Creative Programming for Digital Media &amp; Mobile Apps on Coursera.org</a> about creative programming in <a href="https://processing.org/">Processing</a>) and I blogged about them in my <a href="http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing/">main blog</a>.
+Since I have already done some of the assignments some time ago, I focused on some things that I knew about, but did not do so far.</p>
+
+<h2>Creating gifs</h2>
+
+<p>There are basically two simple ways to create gifs from Processing sketches (that&rsquo;s what the single programs are called in the Processing world) and both are explained by <a href="http://www.jeromeherr.space/">Jerome Herr</a> on <a href="http://p5art.tumblr.com/">his Tumblr</a>:</p>
+
+<ol>
+<li><a href="http://p5art.tumblr.com/post/98291300538/turning-a-processing-sketch-into-an-animated-gif">Save single frame images and combine them later with other tools</a> or</li>
+<li><a href="http://p5art.tumblr.com/post/76979034572/exporting-sketches-as-animated-gifs-in-processing">use a library that creates the gif while the program is running</a>.</li>
+</ol>
+
+
+<p>I tried both and both worked fine, at least in part. I was able to install <a href="http://www.lcdf.org/gifsicle/">gifsicle</a>, but it would not run properly so I did what anyone would do who already has some experience with <a href="http://www.imagemagick.org/index.php">ImageMagick</a>, I used the usual <a href="https://www.tjhsst.edu/~dhyatt/supercomp/n401a.html">convert</a> to do the trick.</p>
+
+<p>I will need some more tries to determine, which method to use more because they seem to have different effects on the speed of execution of the sketches. This doesn&rsquo;t really matter, when the animations are generated by code alone, because the framerate will be the same for the exection as for the gif, but it produces much different output when human interaction is part of the sketch.</p>
+
+<p>So probably there will be more here about <a href="https://processing.org/">Processing</a> in the near future. By the way, the mentioned Tumblr from Jerome also has a <a href="http://p5art.tumblr.com/tutorials">nice list of learning ressources for Processing</a>.</p>
 ]]></content>
   </entry>
   

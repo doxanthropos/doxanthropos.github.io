@@ -9,7 +9,7 @@
   <meta name="author" content="Knut Jackowski">
 
   
-  <meta name="description" content="Some notes about Processing Creative Coding MOOC Since last week there is a course about creative coding on Futurelearn, held by John McCormack from &hellip;">
+  <meta name="description" content="UPDATE: I removed the processing.js from the head, because it meant unneccessary page load on the blog and because P5.js. It also works, if you put &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -23,13 +23,13 @@
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Fragmented Notes" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <script src="/javascripts/processing.min.js"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- I disabled the googlefonts, because the increased the page load without neccessity. -->
+<!-- <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"> -->
 
   
 
@@ -90,7 +90,15 @@
   </header>
 
 
-<div class="entry-content"><p>Some notes about Processing</p>
+<div class="entry-content"><p>UPDATE: I removed the processing.js from the head, because it meant unneccessary page load on the blog and because <a href="https://p5js.org">P5.js</a>. It also works, if you put it in the article, like I did here, after the &ldquo;more&rdquo;-break, so that it only loads when someone is actually viewing the post that contains the Processing example.</p>
+
+<p>Some notes about Processing</p>
+
+<!-- more -->
+
+
+<script src="/javascripts/processing.min.js"></script>
+
 
 <h3>Creative Coding MOOC</h3>
 
@@ -165,7 +173,7 @@ In short: You just put the Prcessing.js file in place, where you store your othe
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/coding/'>coding</a>, <a class='category' href='/blog/categories/creative/'>creative</a>, <a class='category' href='/blog/categories/processing/'>processing,</a>
+    <a class='category' href='/blog/categories/coding/'>coding</a>, <a class='category' href='/blog/categories/creative/'>creative</a>, <a class='category' href='/blog/categories/processing/'>processing</a>
   
 </span>
 
@@ -207,6 +215,14 @@ In short: You just put the Prcessing.js file in place, where you store your othe
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/05/15/blogging-about-p5js/">Blogging About P5JS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/05/15/a-minimalist-physics-engine/">A Minimalist Physics Engine</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/04/10/review-advanced-styling-with-responsive-design/">Review: Advanced Styling With Responsive Design</a>
       </li>
     
@@ -216,14 +232,6 @@ In short: You just put the Prcessing.js file in place, where you store your othe
     
       <li class="post">
         <a href="/blog/2016/03/08/adventures-in-web-animation/">Review: Adventures in Web Animations</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/09/creative-coding-again/">Creative Coding With Processing ... Again</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/26/sharing-with-diaspora/">Sharing With Diaspora</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2016-05-06T11:52:16+02:00</updated>
+  <updated>2016-05-16T11:52:54+02:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -12,6 +12,228 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Blogging About P5JS]]></title>
+    <link href="http://doxanthropos.github.io/blog/2016/05/15/blogging-about-p5js/"/>
+    <updated>2016-05-15T15:47:56+02:00</updated>
+    <id>http://doxanthropos.github.io/blog/2016/05/15/blogging-about-p5js</id>
+    <content type="html"><![CDATA[<p>This is kind of a new version of my old <a href="http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing/">post about Processing</a> and will cover the things I learned while writing my <a href="http://doxanthropos.github.io/blog/2016/05/15/a-minimalist-physics-engine/">last post</a> to make a <a href="https://p5js.org/">P5JS</a>-sketch work on this blog.</p>
+
+<!-- more -->
+
+
+<p><a href="https://p5js.org/">P5</a> is somewhat different from the common <a href="https://processing.org/">Processing</a>, because it is a complete rewrite of the language into Javascript. This makes it easier to use on the web and also more flexible to include into a webpage in places where traditional Processing even with Processing.js would not work.</p>
+
+<p>Consider this code that I used to run the sketch in my last post:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;/javascripts/p5.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;/javascripts/p5.dom.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">center</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onclick</span><span class="o">=</span><span class="s2">&quot;setup();&quot;</span><span class="o">&gt;</span><span class="nx">Restart</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/center&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;p5canvas&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">w</span><span class="p">;</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">cnv</span> <span class="o">=</span> <span class="nx">createCanvas</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#p5canvas&quot;</span><span class="p">).</span><span class="nx">width</span><span class="p">(),</span><span class="mi">360</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">cnv</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s2">&quot;p5canvas&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">w</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Walker</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">background</span><span class="p">(</span><span class="mi">51</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">w</span><span class="p">.</span><span class="nx">display</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">w</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">Walker</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">pos</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">vel</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">acc</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">);</span>   
+</span><span class='line'>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">update</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">vel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">acc</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">vel</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="nx">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">ellipse</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="mi">48</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The first two lines are kind of obvious. They load the necessary p5-libraries into the page.</p>
+
+<p>Line 4 is useful for many sketches that include movement, to start it again at the beginning. The button calls the function &ldquo;setup&rdquo; to restart the whole sketch.</p>
+
+<p>The really cool part is line 6 with lines 10 and 11: they create the canvas for the processing sketch in a normal div that is adressed by its id (#p5canvas). This is done with the <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom</a> library that is really good documented (this is where I learned how to do this).</p>
+
+<p>I used jQuery to pass the width of the div to the setup function, so that it would fit into the blog regardless of the size of the window.</p>
+
+<p>One cool consequence of this is that P5 can be inserted into any html element on your website that you can identify via JavaScript/jQuery.</p>
+
+<p>I really like this.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Minimalist Physics Engine]]></title>
+    <link href="http://doxanthropos.github.io/blog/2016/05/15/a-minimalist-physics-engine/"/>
+    <updated>2016-05-15T13:04:03+02:00</updated>
+    <id>http://doxanthropos.github.io/blog/2016/05/15/a-minimalist-physics-engine</id>
+    <content type="html"><![CDATA[<p><a href="https://twitter.com/shiffman">Daniel Shiffman</a> surprised me yesterday in his course &ldquo;<a href="https://www.kadenze.com/courses/the-nature-of-code">The Nature of Code</a>&rdquo; with a most simple concept of a physics engine in two lines of JavaScript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">pos</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">vel</span><span class="p">);</span>
+</span><span class='line'><span class="nx">vel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">acc</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<script src="http://doxanthropos.github.io/javascripts/p5.js"></script>
+
+
+<script src="http://doxanthropos.github.io/javascripts/p5.dom.js"></script>
+
+
+<p>These two lines have the three components(vectors) that are necessary to describe movement: position, velocity and acceleration:</p>
+
+<ol>
+<li>Objects have a position (pos).</li>
+<li>The position gets changed (add) by velocity (vel).</li>
+<li>The velocity gets changed (add) by acceleration (acc).</li>
+</ol>
+
+
+<p>The add-method comes from <a href="https://p5js.org">P5JS</a> and belongs to the <a href="linktothevectorobjectsdocumentation">vector object</a>.</p>
+
+<p>Of course to use it in a sketch, there is more to write than these two lines, but they contain the core concept. For example, this code from the course creates a circle that looks like it is falling, because it accelerates downward:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="kd">function</span> <span class="nx">Walker</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">pos</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">vel</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">acc</span> <span class="o">=</span> <span class="nx">createVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">);</span>   
+</span><span class='line'>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">update</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">vel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">acc</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">vel</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="nx">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">ellipse</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="mi">48</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<center>
+<button onclick="setup();" style="align:right;">Restart</button>
+</center>
+
+
+<div id="p5canvas"></div>
+
+
+<script>
+var w;
+function setup() {
+    var cnv = createCanvas($("#p5canvas").width(),360);
+    w = new Walker(width/2,0);
+    cnv.parent("p5canvas");
+}
+
+function draw() {
+    background(51);
+    w.display();
+    w.update();
+  
+}
+
+function Walker(x,y) {
+    this.pos = createVector(x,y);
+    this.vel = createVector(0,0);
+    this.acc = createVector(0,0.1); 
+
+    this.update = function(){
+        this.vel.add(this.acc);
+        this.pos.add(this.vel);
+    }
+
+    this.display = function(){
+        fill(255);
+        ellipse(this.pos.x,this.pos.y,48,48);
+    }
+}
+
+</script>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Advanced Styling With Responsive Design]]></title>
@@ -311,7 +533,15 @@ sudo chmod 644 /usr/local/share/info/sicp.info.gz
     <link href="http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing/"/>
     <updated>2014-06-13T14:56:31+02:00</updated>
     <id>http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing</id>
-    <content type="html"><![CDATA[<p>Some notes about Processing</p>
+    <content type="html"><![CDATA[<p>UPDATE: I removed the processing.js from the head, because it meant unneccessary page load on the blog and because <a href="https://p5js.org">P5.js</a>. It also works, if you put it in the article, like I did here, after the &ldquo;more&rdquo;-break, so that it only loads when someone is actually viewing the post that contains the Processing example.</p>
+
+<p>Some notes about Processing</p>
+
+<!-- more -->
+
+
+<script src="http://doxanthropos.github.io/javascripts/processing.min.js"></script>
+
 
 <h3>Creative Coding MOOC</h3>
 

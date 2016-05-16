@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Creative | Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/blog/categories/creative/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2016-05-06T11:52:16+02:00</updated>
+  <updated>2016-05-16T11:52:54+02:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -18,7 +18,15 @@
     <link href="http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing/"/>
     <updated>2014-06-13T14:56:31+02:00</updated>
     <id>http://doxanthropos.github.io/blog/2014/06/13/blogging-about-processing</id>
-    <content type="html"><![CDATA[<p>Some notes about Processing</p>
+    <content type="html"><![CDATA[<p>UPDATE: I removed the processing.js from the head, because it meant unneccessary page load on the blog and because <a href="https://p5js.org">P5.js</a>. It also works, if you put it in the article, like I did here, after the &ldquo;more&rdquo;-break, so that it only loads when someone is actually viewing the post that contains the Processing example.</p>
+
+<p>Some notes about Processing</p>
+
+<!-- more -->
+
+
+<script src="http://doxanthropos.github.io/javascripts/processing.min.js"></script>
+
 
 <h3>Creative Coding MOOC</h3>
 
