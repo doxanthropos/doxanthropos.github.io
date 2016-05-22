@@ -18,6 +18,7 @@ Here is a short list:
 - [Responsive Website Basics: Code with HTML, CSS, and JavaScript ][responsive01]
 - [Introduction to Software Product Management][spm01]
 - [Adventures in Web Animations][adventurewa]
+- [Using Python to Access Web Data][pythonnetworkdata]
 
 
 [datatoolbox]:https://www.coursera.org/course/datascitoolbox
@@ -26,3 +27,4 @@ Here is a short list:
 [responsive01]:https://www.coursera.org/learn/website-coding
 [spm01]:https://www.coursera.org/learn/introduction-to-software-product-management
 [adventurewa]:{{ site.url }}/blog/2016/03/08/adventures-in-web-animation/
+[pythonnetworkdata]:https://www.coursera.org/learn/python-network-data
