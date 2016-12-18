@@ -4,7 +4,7 @@
   <title><![CDATA[Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2016-12-11T00:14:00+01:00</updated>
+  <updated>2016-12-18T02:36:35+01:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -18,7 +18,12 @@
     <link href="http://doxanthropos.github.io/blog/2016/11/06/looking-into-web-audio-an-overview/"/>
     <updated>2016-11-06T12:47:03+01:00</updated>
     <id>http://doxanthropos.github.io/blog/2016/11/06/looking-into-web-audio-an-overview</id>
-    <content type="html"><![CDATA[<h2>Yes, there is web-audio. What&rsquo;s the point?</h2>
+    <content type="html"><![CDATA[<p>It looks as if it is possible to create sound just with the capabilities of the browser, using JavaScript to access the <a href="https://www.w3.org/TR/webaudio/">Web Audio API</a>. I take a first look into it.</p>
+
+<!-- more -->
+
+
+<h2>Yes, there is web-audio. What&rsquo;s the point?</h2>
 
 <p>The reason I am writing this blog post is that I want to understand the subject myself, motivated by a course on <a href="https://www.kadenze.com/courses/creative-programming-for-audiovisual-art-i">Creative Programming for Audiovisual Art</a>, tought by Mick Grierson at Goldsmiths University of London. I ran into some technical problems right in the first session, starting with the web platform, that is used for coding in the course eating all my RAM and so basically freezing itself and my entire computer. So I looked into the library that is used in this course (<a href="https://github.com/micknoise/Maxim">Maxim</a>, a c++ library ported to JavaScript, written by Mick Grierson) and tried the examples, provided with the library and got not sound, but error messages. Since I am in no hurry to get through the course (I am only accessing it with the free plan, where I don&rsquo;t get graded anyway), I decided to dig a little deeper into it to understand the issues I am having and to find a way to generate sound that will not freeze my computer or make my browsers complain and work well with the course.</p>
 
