@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://doxanthropos.github.io/blog/2017/01/04/100-days-of-code/</loc>
+    <lastmod>2017-01-04T00:55:17+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://doxanthropos.github.io/blog/2016/11/06/looking-into-web-audio-an-overview/</loc>
     <lastmod>2016-11-06T12:47:03+01:00</lastmod>
   </url>
@@ -59,13 +63,13 @@
     <loc>http://doxanthropos.github.io/</loc>
   </url>
   <url>
+    <loc>http://doxanthropos.github.io/links/</loc>
+  </url>
+  <url>
     <loc>http://doxanthropos.github.io/about/</loc>
   </url>
   <url>
     <loc>http://doxanthropos.github.io/courses/</loc>
-  </url>
-  <url>
-    <loc>http://doxanthropos.github.io/links/</loc>
   </url>
   <url>
     <loc>http://doxanthropos.github.io/blog/categories/conversational/</loc>
@@ -111,9 +115,6 @@
   </url>
   <url>
     <loc>http://doxanthropos.github.io/blog/categories/p5js/</loc>
-  </url>
-  <url>
-    <loc>http://doxanthropos.github.io/posts/2/</loc>
   </url>
   <url>
     <loc>http://doxanthropos.github.io/downloads/code/diaspora.html</loc>

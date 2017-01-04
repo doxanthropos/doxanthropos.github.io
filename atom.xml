@@ -4,7 +4,7 @@
   <title><![CDATA[Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2016-12-26T12:23:16+01:00</updated>
+  <updated>2017-01-04T01:06:06+01:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[100 Days of Code]]></title>
+    <link href="http://doxanthropos.github.io/blog/2017/01/04/100-days-of-code/"/>
+    <updated>2017-01-04T00:55:17+01:00</updated>
+    <id>http://doxanthropos.github.io/blog/2017/01/04/100-days-of-code</id>
+    <content type="html"><![CDATA[<p>Being occupied with a lot of other stuff that happened in my life and with other topics to learn, I somehow lost sight of making progress with the curriculum of <a href="http://freecodecamp.com/">FreeCodeCamp</a>. But when I encountered the <a href="https://medium.freecodecamp.com/start-2017-with-the-100daysofcode-improved-and-updated-18ce604b237b">medium-post about the 100 Days of Code challenge</a>, I realized, that it is time to go end get my Front-End-Certificate.</p>
+
+<!-- more -->
+
+
+<p></p>
+
+<p>As the challenge expects, I have forked <a href="https://github.com/Kallaway/100-days-of-code">the repo</a> to track my progress in <a href="https://github.com/doxanthropos/100-days-of-code/blob/master/log.md">a log</a> and I have migrated the existing projects to github for easier version control. All my work on Free Code Camp Projects will now live in a <a href="https://github.com/doxanthropos/fccportfolio">seperate repo</a>. Its contents are also available as websites via Github-Pages (<a href="https://doxanthropos.github.io/fccportfolio/build-a-personal-portfolio-webpage/">Example: The Portfolio Page</a>). I am very curious to see where this will lead me.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Looking Into Web-audio - Generating Sound]]></title>
