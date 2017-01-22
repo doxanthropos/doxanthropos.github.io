@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Webdev, | Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/blog/categories/webdev/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2017-01-22T23:16:19+01:00</updated>
+  <updated>2017-01-22T23:44:34+01:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -12,6 +12,86 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Looking Into Web-audio - Generating Sound]]></title>
+    <link href="http://doxanthropos.github.io/blog/2016/11/06/looking-into-web-audio-an-overview/"/>
+    <updated>2016-11-06T12:47:03+01:00</updated>
+    <id>http://doxanthropos.github.io/blog/2016/11/06/looking-into-web-audio-an-overview</id>
+    <content type="html"><![CDATA[<p>It looks as if it is possible to create sound just with the capabilities of the browser, using JavaScript to access the <a href="https://www.w3.org/TR/webaudio/">Web Audio API</a>. I take a first look into it.</p>
+
+<!-- more -->
+
+
+<h2>Yes, there is web-audio. What&rsquo;s the point?</h2>
+
+<p>The reason I am writing this blog post is that I want to understand the subject myself, motivated by a course on <a href="https://www.kadenze.com/courses/creative-programming-for-audiovisual-art-i">Creative Programming for Audiovisual Art</a>, tought by Mick Grierson at Goldsmiths University of London. I ran into some technical problems right in the first session, starting with the web platform, that is used for coding in the course eating all my RAM and so basically freezing itself and my entire computer. So I looked into the library that is used in this course (<a href="https://github.com/micknoise/Maxim">Maxim</a>, a c++ library ported to JavaScript, written by Mick Grierson) and tried the examples, provided with the library and got not sound, but error messages. Since I am in no hurry to get through the course (I am only accessing it with the free plan, where I don&rsquo;t get graded anyway), I decided to dig a little deeper into it to understand the issues I am having and to find a way to generate sound that will not freeze my computer or make my browsers complain and work well with the course.</p>
+
+<p>So in this post, I will take a basic look into what the web-audio API is, which libraries look promising to me and maybe even find out what I did wrong with Maxim in the process. At the end I would like to have a couple of working simple examples to show, with different technologies.</p>
+
+<p>Dan Mackinlay wrote about this topic in a <a href="https://livingthing.danmackinlay.name/javascript_audio.html">blog post</a>, that was one of my first finds when looking for clues to web-audio.</p>
+
+<h2>Can I use it?</h2>
+
+<p>As with all modern web technologies one of the first questions might be: Does it even work in my browser? Can I use it for projects that are meant to be seen by the public or will they encounter problems with their browsers or devices?</p>
+
+<p>The short answer is &ldquo;Yes&rdquo;.</p>
+
+<p>The long answer:
+In november 2016 it is supported by all major browsers on the desktop, on iOS and on Chrome for Android. The only browsers that do not support web-audio are Opera-Mini and Internet Explorer (<a href="http://caniuse.com/#feat=audio-api">source</a>), but who cares about IE anymore.</p>
+
+<p> There are some parts of it that are differing between the browsers.</p>
+
+<p>&ldquo;getUserMedia/Stream API&rdquo; seems to be a part of the web-audio API that is still at least a little problematic, because it is handled differently by the browsers that implement it:
+Chrome and Firefox require prefixes: Firefox uses &ldquo;moz&rdquo; and Chrome and Opera use &ldquo;webkit&rdquo; and Chrome can only be called from secure origins.</p>
+
+<h2>How to use it?</h2>
+
+<p>Basically there are two main options: using it directly, with vanilla JavaScript, or using it with the help of a library. The existance of multiple libraries might indicate, that there is a need for one.</p>
+
+<h2>Without library</h2>
+
+<p>This primary documentation is as always of course the <a href="https://www.w3.org/TR/webaudio/">specification by the w3c</a>, but it is (because it is a specification and not a tutorial or introduction) not the best read.</p>
+
+<p>Surprisingly (considering that IE does not support web-audio) Microsoft has a good (short) <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/dev-guide/multimedia/web-Audio/">introduction into the API</a>. It is not really helpful for understanding to create sound, because it focuses on working with audio inputs like sound files or microphone streams, the relevant info for generating sound is in the article about the <a href="https://msdn.microsoft.com/library/dn954887%28v=vs.85%29.aspx">OscillatorNode</a>. This is the same with the Mozilla Developer Network on <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode">OscillatorNode</a>. While here I am only looking into creating sound, the <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode">AnalyserNode</a> needs mentioning for later projects, that might include audio visualization. There is a nice example of the OscillatorNode combined with some graphics on MDN called <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>.</p>
+
+<p>With this I was able to produce a simple page that plays a sine wave and adjusts the volume with two buttons:</p>
+
+<p><a href="https://doxanthropos.github.io/sketchbook/web-audio/01/">Example 1</a></p>
+
+<p>As you can see in the code or in the mentioned documentation, the AudioContext works with different nodes, that are connected to another, beginning with one or more sources, going through some nodes that do stuff with the signal and then joined into a Destination. A very nice tutorial that goes deep enough to do real stuff is <a href="https://www.html5rocks.com/en/tutorials/webaudio/intro/#toc-volume">Getting Started with Web Audio API</a> by HTML5 Rocks.</p>
+
+<h2>Libraries</h2>
+
+<p>For a list of existing libraries you can go to <a href="https://livingthing.danmackinlay.name/javascript_audio.html">Dan Mackinleays blog post</a>, that I mentioned in the first paragraph. I will look into two that are of interest to me.</p>
+
+<h3><a href="https://p5js.org/reference/#/libraries/p5.sound">p5.sound</a></h3>
+
+<p>As the name suggests, this is an addition to <a href="http://p5js.org/">p5.js</a>, a JavaScript library that is a reimagination of the <a href="http://processing.org/">Processing language</a> for creative programming.</p>
+
+<p>The sound library is provided at the website of the p5.js-project and it is also included in the p5-editor. That makes using the library very easy if you are already using p5 for creative programming.</p>
+
+<p>To generate sounds there is also an oscillator object, but the p5.Oscillator combines with it some functions that are part of other nodes in the Web Audio API, for example the <a href="https://p5js.org/reference/#/p5.Oscillator/amp">amp()-method</a> for controlling the amplitude, that not only changes the value of the amplitude, but also takes an optional value for smoothing the transition.</p>
+
+<p><a href="httop://p5js.org/">p5.js</a> has another advantage and that is <a href="http://shiffman.net/">Daniel Shiffman</a>, a professor at NYU, who makes great videos about p5 and processing, that are to be found on <a href="https://www.youtube.com/user/shiffman">his youtube-channel</a>, like this <a href="https://www.youtube.com/watch?v=bM9MfoKe9GU">long one about sound visualization</a>.</p>
+
+<p><a href="https://doxanthropos.github.io/sketchbook/web-audio/02/">Example 2</a></p>
+
+<h3><a href="https://github.com/micknoise/Maxim">Maxim</a></h3>
+
+<p>I have not looked into this one yet, which is of course a little stupid, because it is the one used in the course that prompted this excursion.</p>
+
+<h2>Conclusion for today</h2>
+
+<p>It is not that difficult to start generating sounds without any library. The Web Audio API has good documentation and is not very obscure.</p>
+
+<ul>
+<li><a href="https://doxanthropos.github.io/sketchbook/web-audio/01/">Example 1</a></li>
+<li><a href="https://doxanthropos.github.io/sketchbook/web-audio/02/">Example 2</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Advanced Styling With Responsive Design]]></title>
