@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Javascript, | Fragmented Notes]]></title>
+  <title><![CDATA[Category: Javascript | Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2017-03-19T18:43:51+01:00</updated>
+  <updated>2017-03-25T14:26:05+01:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -89,6 +89,180 @@ Chrome and Firefox require prefixes: Firefox uses &ldquo;moz&rdquo; and Chrome a
 <li><a href="https://doxanthropos.github.io/sketchbook/web-audio/01/">Example 1</a></li>
 <li><a href="https://doxanthropos.github.io/sketchbook/web-audio/02/">Example 2</a></li>
 </ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Blogging About P5JS]]></title>
+    <link href="http://doxanthropos.github.io/blog/2016/05/15/blogging-about-p5js/"/>
+    <updated>2016-05-15T15:47:56+02:00</updated>
+    <id>http://doxanthropos.github.io/blog/2016/05/15/blogging-about-p5js</id>
+    <content type="html"><![CDATA[<p>This is kind of a new version of my old <a href="/blog/2014/06/13/blogging-about-processing/">post about Processing</a> and will cover the things I learned while writing my <a href="/blog/2016/05/15/a-minimalist-physics-engine/">last post</a> to make a <a href="https://p5js.org/">P5JS</a>-sketch work on this blog.</p>
+
+<!-- more -->
+
+
+<p><a href="https://p5js.org/">P5</a> is somewhat different from the common <a href="https://processing.org/">Processing</a>, because it is a complete rewrite of the language into Javascript. This makes it easier to use on the web and also more flexible to include into a webpage in places where traditional Processing even with Processing.js would not work.</p>
+
+<p>Consider this code that I used to run the sketch in my last post:
+``` Javascript</p>
+
+<script src="http://doxanthropos.github.io/javascripts/p5.js"></script>
+
+
+<script src="http://doxanthropos.github.io/javascripts/p5.dom.js"></script>
+
+
+<center>
+<button onclick="setup();">Restart</button>
+</center>
+
+
+<div id="p5canvas"></div>
+
+
+<script>
+var w;
+function setup() {
+    var cnv = createCanvas($("#p5canvas").width(),360);
+    cnv.parent("p5canvas");
+    w = new Walker(width/2,0);
+}
+
+function draw() {
+    background(51);
+    w.display();
+    w.update();
+  
+}
+
+function Walker(x,y) {
+    this.pos = createVector(x,y);
+    this.vel = createVector(0,0);
+    this.acc = createVector(0,0.1); 
+
+    this.update = function(){
+        this.vel.add(this.acc);
+        this.pos.add(this.vel);
+    }
+
+    this.display = function(){
+        fill(255);
+        ellipse(this.pos.x,this.pos.y,48,48);
+    }
+}
+
+</script>
+
+
+<p>```
+The first two lines are kind of obvious. They load the necessary p5-libraries into the page.</p>
+
+<p>Line 4 is useful for many sketches that include movement, to start it again at the beginning. The button calls the function &ldquo;setup&rdquo; to restart the whole sketch.</p>
+
+<p>The really cool part is line 6 with lines 10 and 11: they create the canvas for the processing sketch in a normal div that is adressed by its id (#p5canvas). This is done with the <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom</a> library that is really good documented (this is where I learned how to do this).</p>
+
+<p>I used jQuery to pass the width of the div to the setup function, so that it would fit into the blog regardless of the size of the window.</p>
+
+<p>One cool consequence of this is that P5 can be inserted into any html element on your website that you can identify via JavaScript/jQuery.</p>
+
+<p>I really like this.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Minimalist Physics Engine]]></title>
+    <link href="http://doxanthropos.github.io/blog/2016/05/15/a-minimalist-physics-engine/"/>
+    <updated>2016-05-15T13:04:03+02:00</updated>
+    <id>http://doxanthropos.github.io/blog/2016/05/15/a-minimalist-physics-engine</id>
+    <content type="html"><![CDATA[<p><a href="https://twitter.com/shiffman">Daniel Shiffman</a> surprised me yesterday in his course &ldquo;<a href="https://www.kadenze.com/courses/the-nature-of-code">The Nature of Code</a>&rdquo; with a most simple concept of a physics engine in two lines of JavaScript:</p>
+
+<pre><code class="Javascript">pos.add(vel);
+vel.add(acc);
+</code></pre>
+
+<!-- more -->
+
+
+<script src="http://doxanthropos.github.io/javascripts/p5.js"></script>
+
+
+<script src="http://doxanthropos.github.io/javascripts/p5.dom.js"></script>
+
+
+<p>These two lines have the three components(vectors) that are necessary to describe movement: position, velocity and acceleration:</p>
+
+<ol>
+<li>Objects have a position (pos).</li>
+<li>The position gets changed (add) by velocity (vel).</li>
+<li>The velocity gets changed (add) by acceleration (acc).</li>
+</ol>
+
+
+<p>The add-method comes from <a href="https://p5js.org">P5JS</a> and belongs to the <a href="linktothevectorobjectsdocumentation">vector object</a>.</p>
+
+<p>Of course to use it in a sketch, there is more to write than these two lines, but they contain the core concept. For example, this code from the course creates a circle that looks like it is falling, because it accelerates downward:</p>
+
+<pre><code class="Javascript">function Walker(x,y) {
+    this.pos = createVector(x,y);
+    this.vel = createVector(0,0);
+    this.acc = createVector(0,0.1); 
+
+    this.update = function(){
+        this.vel.add(this.acc);
+        this.pos.add(this.vel);
+    }
+
+    this.display = function(){
+        fill(255);
+        ellipse(this.pos.x,this.pos.y,48,48);
+    }
+}
+</code></pre>
+
+<center>
+<button onclick="setup();" style="align:right;">Restart</button>
+</center>
+
+
+<div id="p5canvas"></div>
+
+
+<script>
+var w;
+function setup() {
+    var cnv = createCanvas($("#p5canvas").width(),360);
+    w = new Walker(width/2,0);
+    cnv.parent("p5canvas");
+}
+
+function draw() {
+    background(51);
+    w.display();
+    w.update();
+  
+}
+
+function Walker(x,y) {
+    this.pos = createVector(x,y);
+    this.vel = createVector(0,0);
+    this.acc = createVector(0,0.1); 
+
+    this.update = function(){
+        this.vel.add(this.acc);
+        this.pos.add(this.vel);
+    }
+
+    this.display = function(){
+        fill(255);
+        ellipse(this.pos.x,this.pos.y,48,48);
+    }
+}
+
+</script>
+
+
 
 ]]></content>
   </entry>

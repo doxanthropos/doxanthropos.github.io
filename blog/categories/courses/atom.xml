@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Courses | Fragmented Notes]]></title>
   <link href="http://doxanthropos.github.io/blog/categories/courses/atom.xml" rel="self"/>
   <link href="http://doxanthropos.github.io/"/>
-  <updated>2017-03-19T18:43:51+01:00</updated>
+  <updated>2017-03-25T14:26:05+01:00</updated>
   <id>http://doxanthropos.github.io/</id>
   <author>
     <name><![CDATA[Knut Jackowski]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Review: HTML5 Canvas - From Pixels to Animation]]></title>
+    <link href="http://doxanthropos.github.io/blog/2017/03/25/html5-canvas-from-pixels-to-animation/"/>
+    <updated>2017-03-25T13:34:00+01:00</updated>
+    <id>http://doxanthropos.github.io/blog/2017/03/25/html5-canvas-from-pixels-to-animation</id>
+    <content type="html"><![CDATA[<p>Last week I finished the little course <a href="https://www.udacity.com/course/html5-canvas--ud292">HTML5 Canvas - From Pixels to Animation</a> on Udacity. While the technical details were not really new to me, as I have used the canvas before, it was a good refresher on the use of graphics and videos on the canvas without using any libraries.</p>
+
+<!-- more -->
+
+
+<p>The course is not very long, only two lessons, each having roughly the same size as weekly lessons in paced moocs, but this is, as all Udacity courses are, a self-paced course, so it is perfectly fine to work through all the material in more then one week per lesson or even go through it all in one long learning session.</p>
+
+<p>In contrast to some older Udacity courses this course does not work towards one final project, building it up from the beginning of the course until it is finished at the end, but instead there are some smaller projects along the way. I think this is beneficial to make the course accessable for different learners:
+Having one project to work on from the beginning until the end is nice for people who have the time to go through the course in one go or at least in the time it would take someone taking a similar course on a weekly lesson basis. It helps them learn to build complex systems and not only small examples, but it also gets a lot more difficult if there is some time between the lessons, because the learner has something else to do. I have actually given up on more than one course like this, because study breaks caused by other daily life responsibilities led to me spending more time on trying to get into the projects again then on the actual content of these courses.</p>
+
+<p>This course instead has two smaller projects, one for each lesson:</p>
+
+<p>The first lesson shows the basics of working with the canvas element, how to set up a webserver to locally run the code (some of the topics require either a local server or a https connection and will not run when you just open the html-file in your browser), how to draw and how to load assets. The final project of this is a Meme-Maker that combines images with text.</p>
+
+<p>The second lesson dives into the topic of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">pixel array</a>, that is part of the ImageData object, working with video data and animation, providing all the necessary building blocks of programming a game. During the lesson the examples move around the topic of image and video manipulation, like these two sketches:</p>
+
+<ul>
+<li><a href="https://doxanthropos.github.io/sketchbook/2017031901/">Photo manipulator 01</a></li>
+<li><a href="https://doxanthropos.github.io/sketchbook/2017032001/">Photo manipulator 02</a></li>
+</ul>
+
+
+<p>In general I would say this is a nice basic course that covers a lot of the possibilities of the HTML5 canvas in a short time. To go deeper into any of the shown directions, for example game programming, a lot more material will be needed, but after this course one will be able to have an idea how to go on about that.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A Minimalist Physics Engine]]></title>
